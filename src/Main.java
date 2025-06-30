@@ -31,6 +31,11 @@ class Plane extends Logistics{
 }
 public class Main {
     public static void main(String[] args) {
-
+        Factory sea = new BoatFactory();
+        Factory air = new PlaneFactory();
+        Factory earth = new TruckFactory();
+        Logistics myboat = sea.createLogistic();
+        Logistics myplane = air.createLogistic();
+        Logistics mytruck = earth.createLogistic();
     }
 }
